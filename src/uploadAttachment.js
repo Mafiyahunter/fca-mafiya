@@ -1,5 +1,5 @@
 const utils = require("../utils");
-// @NethWs3Dev
+// @Mafiyahunter
 
 module.exports = function (defaultFuncs, api, ctx) {
   function upload(attachments, callback) {
