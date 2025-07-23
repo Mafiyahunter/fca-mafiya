@@ -1,7 +1,7 @@
 "use strict";
 
 var utils = require('../utils');
-//NethWs3Dev
+//Mafiyahunter
 
 module.exports = function (defaultFuncs, api, ctx) {
   function handleAvatar(userIDs, height, width) {
