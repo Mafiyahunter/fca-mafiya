@@ -1,6 +1,6 @@
 {
     "name": "fca-mafiya",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "A node.js package for automating Facebook Messenger bot, and is one of the most advanced next-generation Facebook Chat API (FCA) by @Mafiyahunter (Mafiya)",
     "main": "index.js",
     "scripts": {
