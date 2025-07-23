@@ -272,7 +272,7 @@ async function loginHelper(appState, apiCustomized, callback) {
     api.addFunctions(`${__dirname}/src`);
     api.listen = api.listenMqtt;
     api.refreshFb_dtsg = apiFuncs.refreshFb_dtsg;
-    api.mafiya = { ...(apiCustomized && { ...apiCustomized }) };
+    api.ws3 = { ...(apiCustomized && { ...apiCustomized }) };
     const userID = api.getCurrentUserID();
     if (resp?.request?.uri?.href?.includes(fbLink("checkpoint")) && resp.request.uri.href.includes("601051028565049")) {
       utils.warn(`Automated behavior detected on account ${userID}. This may cause auto-logout; resubmit appstate if needed.`);
@@ -303,7 +303,7 @@ async function loginHelper(appState, apiCustomized, callback) {
       utils.warn(botInitialData.error);
       utils.warn(`WARNING: Failed to fetch account info. Proceeding to log in for user ${userID}`);
     }
-    utils.log("To check updates: you may check on https://github.com/Mafiyahunter/fca-mafiya");
+    utils.log("To check updates: you may check on https://github.com/NethWs3Dev/ws3-fca");
     return callback(null, api);
   } catch (error) {
     return callback(error);
@@ -341,9 +341,9 @@ async function login(cookie, options, callback) {
   
   Object.assign(globalOptions, defaultOptions, options);
   
-  const loginmafiya = () => {
+  const loginWs3 = () => {
     loginHelper(cookie, {
-        relogin: loginmafiya,
+        relogin: loginWs3,
       },
       (loginError, loginApi) => {
         if (loginError) {
@@ -356,7 +356,7 @@ async function login(cookie, options, callback) {
   };
   
   await setOptions(options);
-  loginmafiya();
+  loginWs3();
 }
 
 module.exports = {
