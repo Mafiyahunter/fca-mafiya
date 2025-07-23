@@ -1,43 +1,42 @@
 {
     "name": "fca-mafiya",
     "version": "2.0.1",
-    "description": "A node.js package for automating Facebook Messenger bot, and is one of the most advanced next-generation Facebook Chat API (FCA) by @NethmafiyaDev (Kenneth Aceberos)",
+    "description": "A node.js package for automating Facebook Messenger bot, and is one of the most advanced next-generation Facebook Chat API (FCA) by @Mafiyahunter (Mafiya)",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Mafiyahunter/fca-mafiya"
+        "url": "git+https://github.com/Mafiyahunter/fca-mafiya.git"
     },
     "social": {
         "github": "https://github.com/Mafiyahunter",
         "facebook": "https://www.facebook.com/mafiyax.73903"
     },
-    "author": "Mafiya Oii'x",
+    "author": "Mafiya",
     "license": "MIT",
     "bugs": {
-        "url": ""
+        "url": "https://github.com/Mafiyahunter/fca-mafiya/issues"
     },
-    "homepage": "",
+    "homepage": "https://github.com/Mafiyahunter/fca-mafiya#readme",
     "keywords": [
         "facebook",
         "chat",
         "api",
         "fca",
         "mafiya",
-        "mafiya-chat-api",
-        "fca-mafiya"
+        "bot",
+        "messenger"
     ],
     "dependencies": {
         "axios": "^1.6.5",
         "chalk": "^3.0.0",
-        "cheerio": "^0.22.0",
+        "cheerio": "^1.0.0",
         "gradient-string": "^1.1.0",
         "https-proxy-agent": "^4.0.0",
         "mqtt": "^3.0.0",
         "node-cron": "^3.0.3",
-        "request": "^2.88.2",
         "websocket-stream": "^5.5.0"
     },
     "devDependencies": {
