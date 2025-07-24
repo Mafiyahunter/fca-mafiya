@@ -272,7 +272,7 @@ async function loginHelper(appState, apiCustomized, callback) {
     api.addFunctions(`${__dirname}/src`);
     api.listen = api.listenMqtt;
     api.refreshFb_dtsg = apiFuncs.refreshFb_dtsg;
-    api.ws3 = { ...(apiCustomized && { ...apiCustomized }) };
+    api.mafiya = { ...(apiCustomized && { ...apiCustomized }) };
     const userID = api.getCurrentUserID();
     if (resp?.request?.uri?.href?.includes(fbLink("checkpoint")) && resp.request.uri.href.includes("601051028565049")) {
       utils.warn(`Automated behavior detected on account ${userID}. This may cause auto-logout; resubmit appstate if needed.`);
@@ -297,13 +297,14 @@ async function loginHelper(appState, apiCustomized, callback) {
     utils.log("Successfully logged in.");
     const botInitialData = await api.getBotInitialData();
     if (!botInitialData.error) {
-      utils.log(`Hello, ${botInitialData.name} (${botInitialData.uid})`);
+      utils.log(`HELLO MR , ${botInitialData.name} (${botInitialData.uid})`);
       ctx.userName = botInitialData.name;
     } else {
       utils.warn(botInitialData.error);
       utils.warn(`WARNING: Failed to fetch account info. Proceeding to log in for user ${userID}`);
     }
-    utils.log("To check updates: you may check on https://github.com/NethWs3Dev/ws3-fca");
+    utils.log(" YOUR BOT FIXED BY MR MAFIYA XWD 💀 ");
+    utils.log(" To check updates: you may check on https://github.com/Mafiyahunter/fca-mafiya");
     return callback(null, api);
   } catch (error) {
     return callback(error);
@@ -341,9 +342,9 @@ async function login(cookie, options, callback) {
   
   Object.assign(globalOptions, defaultOptions, options);
   
-  const loginWs3 = () => {
+  const loginmafiya = () => {
     loginHelper(cookie, {
-        relogin: loginWs3,
+        relogin: loginmafiya,
       },
       (loginError, loginApi) => {
         if (loginError) {
@@ -356,7 +357,7 @@ async function login(cookie, options, callback) {
   };
   
   await setOptions(options);
-  loginWs3();
+  loginmafiya();
 }
 
 module.exports = {
