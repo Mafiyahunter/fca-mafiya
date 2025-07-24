@@ -1,5 +1,5 @@
 "use strict";
-// Fixed by @NethWs3Dev
+// Fixed by @Mafiyahunter
 // Chopchop wood from other fca
 var utils = require("../utils");
 var mqtt = require('mqtt');
@@ -120,7 +120,7 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
       globalCallback({ type: "stop_listen", error: "Connection refused: Server unavailable" }, null);
     }
     utils.warn("Error detected. Will relogin automatically...");
-    api.ws3.relogin();
+    api.mafiya.relogin();
     return;
   });
 
